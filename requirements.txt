@@ -1,5 +1,5 @@
-pillow
-numpy
+pillow==11.2.1
+numpy==2.1.2
 requests
 spotipy
 RGBMatrixEmulator
