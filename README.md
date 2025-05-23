@@ -1,9 +1,20 @@
 # rpi-spotify-matrix-display
 
-A Spotify display for 64x64 RGB LED matrices
+A Spotify display for 64x64 RGB LED matrices from https://github.com/kylejohnsonkj/rpi-spotify-matrix-display
 
 ## Hardware
-[Here is the list](https://www.reddit.com/r/raspberry_pi/comments/ombwwg/my_64x64_rgb_led_matrix_album_art_display_pi_3b/) of hardware I used. You can ignore the software details as they are irrelevant for v2.
+- Adafruit 64x64 rgb led matrix (2.5mm pitch)
+
+- Adafruit matrix bonnet (modded for pwm and address E line to support a 64x64 matrix)
+
+- raspberry pi zero W headers
+
+- 32GB microSD card (loaded with pi OS lite)
+
+- 5v 10a switching psu
+
+- 3d printed case ( https://www.thingiverse.com/thing:6687509#google_vignette )
+  - Screws
 
 ## Spotify Pre-Setup
 1. Go to https://developer.spotify.com/dashboard
