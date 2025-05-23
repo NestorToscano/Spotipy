@@ -1,11 +1,6 @@
 # rpi-spotify-matrix-display
 
-A Spotify display for 64x64 RGB LED matrices (raspberry pi project v2)
-
-![emulator screenshot](screenshot.png)
-
-> [!NOTE]
-> You can run this project either on a raspberry pi connected to an rgb matrix or in a window that emulates a matrix display. If you don't have the components yet, emulation is a great option!
+A Spotify display for 64x64 RGB LED matrices
 
 ## Hardware
 [Here is the list](https://www.reddit.com/r/raspberry_pi/comments/ombwwg/my_64x64_rgb_led_matrix_album_art_display_pi_3b/) of hardware I used. You can ignore the software details as they are irrelevant for v2.
@@ -26,31 +21,6 @@ A Spotify display for 64x64 RGB LED matrices (raspberry pi project v2)
 https://github.com/user-attachments/assets/9bf163f9-8e0f-47cc-b2d2-a62b3a975471
 
 <sup>The above video is from [my reddit post here.](https://www.reddit.com/r/raspberry_pi/comments/ziz4hk/my_64x64_rgb_led_matrix_album_art_display_pi_3b/)</sup>
-
-## Emulator Setup
-
-1. Clone and enter the repo
-   - `git clone --recurse-submodules https://github.com/kylejohnsonkj/rpi-spotify-matrix-display`
-   - `cd rpi-spotify-matrix-display/`
-2. **Set your Client ID and Secret ID in the config.ini** 🙂
-3. Create and activate a python [virtual environment](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/)
-   - `python3 -m venv .venv`
-   - `source .venv/bin/activate`
-4. Install dependencies
-   - `python3 -m pip install -r requirements.txt`
-5. Run the controller emulated (-e) from the impl/ directory
-   - `cd impl/`
-   - `python3 controller_v3.py -e`
-6. Authorize Spotify
-   - After running, follow instructions provided in the console. Pasted link should begin with http://127.0.0.1:8080/callback
-   - After successful authorization, play a song and the display will appear!
-
-## Arguments
-| Argument | Default | Description |
-| :- | :- | :- |
-|`-e` , `--emulated`| false | Run in a matrix emulator |
-|`-f` , `--fullscreen`| false | Always display album art in full screen (64x64) |
-|`-h` , `--help`| false | Display help messages for arguments |
 
 ## Configuration
 Configuration is handled in the config.ini. I have included my own as a sample.
