@@ -1,6 +1,6 @@
 # rpi-spotify-matrix-display
 
-A Spotify display for 64x64 RGB LED matrices from https://github.com/kylejohnsonkj/rpi-spotify-matrix-display
+A Spotify display for 64x64 RGB LED matrices from https://github.com/kylejohnsonkj/rpi-spotify-matrix-display that I wanted to make as a present for someone special to me.
 
 ## Hardware
 - Adafruit 64x64 rgb led matrix (2.5mm pitch)
@@ -25,24 +25,12 @@ A Spotify display for 64x64 RGB LED matrices from https://github.com/kylejohnson
 6. Copy the generated Client ID and Secret ID for later
 
 ## Pi Setup
-
-> [!IMPORTANT]
-> Please see the [pi setup wiki page](https://github.com/kylejohnsonkj/rpi-spotify-matrix-display/wiki/raspberry-pi-full-setup-guide) for a full installation guide!
-
-https://github.com/user-attachments/assets/9bf163f9-8e0f-47cc-b2d2-a62b3a975471
-
-<sup>The above video is from [my reddit post here.](https://www.reddit.com/r/raspberry_pi/comments/ziz4hk/my_64x64_rgb_led_matrix_album_art_display_pi_3b/)</sup>
+Followed this guide for a the software side (https://github.com/kylejohnsonkj/rpi-spotify-matrix-display/wiki/raspberry-pi-full-setup-guide). Some tweaks were necessary and packages such as libopenblas-dev and python dev tools. Also used 'sudo nmtui' to alter the network settings to allow multiple wifi connections at different spots. Also used nano instead of vim (personal preference)
 
 ## Configuration
 Configuration is handled in the config.ini. I have included my own as a sample.
 
-For Matrix configuration, see https://github.com/hzeller/rpi-rgb-led-matrix#changing-parameters-via-command-line-flags. More extensive customization can be done in `impl/controller_v3.py` directly.
-
-For Spotify configuration, set the `client_id` and `client_secret` to your own. You may leave `redirect_uri` alone. I have also included a `device_whitelist` which is disabled by default.
+For Matrix configuration, see https://github.com/hzeller/rpi-rgb-led-matrix#changing-parameters-via-command-line-flags. More extensive customization can be done in `impl/controller_v3.py` directly. I added my APIs id's to the config.ini file, and i made sure to change the matrix config for the pi zero. It was a slightly slower board, so no gpio slowdown was needed, and i used the adafruit bonnet so that needed to be changed as well.
 
 ## Acknowledgements
-Thanks to allenslab for providing the original codebase for this project, [matrix-dashboard](https://github.com/allenslab/matrix-dashboard). You can find his original reddit post [here](https://www.reddit.com/r/3Dprinting/comments/ujyy4g/i_designed_and_3d_printed_a_led_matrix_dashboard/). This project is an adaption of his Spotify app for 64x64 matrices, while also packing some other improvements.
-
-Thanks to ty-porter for [his fork](https://github.com/ty-porter/matrix-dashboard) of matrix-dashboard from which my development branched from. The emulation support his [RGBMatrixEmulator project](https://github.com/ty-porter/RGBMatrixEmulator) added made it a breeze to develop efficiently.
-
-And finally, thanks to hzeller for his work on [rpi-rgb-led-matrix](https://github.com/hzeller/rpi-rgb-led-matrix).
+Thanks to kyle johnson (https://github.com/kylejohnsonkj/rpi-spotify-matrix-display) for providing the software and overall guide to completing this project for myself. Other versions of this project had various outdated package and os issues that arose while doing this project, but this was the most recent (somewhat) working implementation i could find (even if it took a few days to debug all the issues ;-;).
