@@ -1,5 +1,8 @@
 # rpi-spotify-matrix-display
-<img src="./spotipy.jpg" alt="My Project" width="300"/>
+<p align="center">
+  <img src="./spotipy.jpg" alt="My Project" width="500"/>
+</p>
+
 
 
 A Spotify display for 64x64 RGB LED matrices from https://github.com/kylejohnsonkj/rpi-spotify-matrix-display that I wanted to make as a present for someone special to me.
