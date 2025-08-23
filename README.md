@@ -30,12 +30,13 @@ A Spotify display for 64x64 RGB LED matrices from https://github.com/kylejohnson
 6. Copy the generated Client ID and Secret ID for later
 
 ## Pi Setup
-Followed this guide for a the software side (https://github.com/kylejohnsonkj/rpi-spotify-matrix-display/wiki/raspberry-pi-full-setup-guide). Some tweaks were necessary and packages such as libopenblas-dev and python dev tools. Also used 'sudo nmtui' to alter the network settings to allow multiple wifi connections at different spots. Also used nano instead of vim (personal preference)
+Followed this guide for a the software side (https://github.com/kylejohnsonkj/rpi-spotify-matrix-display/wiki/raspberry-pi-full-setup-guide). Several tweaks were necessary and packages such as libopenblas-dev/python dev tools had problems due to deprecations, so workarounds were necessary. Also used '''sudo nmtui''' to alter the network settings to allow multiple wifi connections at different spots.
 
 ## Configuration
 Configuration is handled in the config.ini. I have included my own as a sample.
 
-For Matrix configuration, see https://github.com/hzeller/rpi-rgb-led-matrix#changing-parameters-via-command-line-flags. More extensive customization can be done in `impl/controller_v3.py` directly. I added my APIs id's to the config.ini file, and i made sure to change the matrix config for the pi zero. It was a slightly slower board, so no gpio slowdown was needed, and i used the adafruit bonnet so that needed to be changed as well.
+For Matrix configuration, see https://github.com/hzeller/rpi-rgb-led-matrix#changing-parameters-via-command-line-flags. More extensive customization can be done in `impl/controller_v3.py` directly. I added my APIs id's to the config.ini file, and I made sure to change the matrix configurations for the pi zero. It was a slightly slower board, so I decided no gpio slowdown was needed, and I used the adafruit bonnet which required me to add extra soldered connections.
 
 ## Acknowledgements
-Thanks to kyle johnson (https://github.com/kylejohnsonkj/rpi-spotify-matrix-display) for providing the software and overall guide to completing this project for myself. Other versions of this project had various outdated package and os issues that arose while doing this project, but this was the most recent (somewhat) working implementation i could find (even if it took a few days to debug all the issues ;-;).
+Thanks to kyle johnson (https://github.com/kylejohnsonkj/rpi-spotify-matrix-display) for providing the software and overall guide to completing this project for myself. Other versions of this project had various outdated package and os issues that arose while doing this project, but this was the most recent (somewhat) working implementation I could find (even if it took a few days to debug all the issues ;-;).
+
